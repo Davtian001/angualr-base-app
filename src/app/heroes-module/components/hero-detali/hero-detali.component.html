@@ -1,0 +1,9 @@
+<div *ngIf="hero$ | async as hero">
+  <span style="margin: 1% 3%; cursor: pointer;" (click)="prevHero()">Previus</span>
+  <span style="margin: 1% 3%; cursor: pointer;" (click)="nextHero()">Next</span>
+  {{ heroId }}
+  <h2>HERO:| "{{ hero.name }} {{ hero.id }}</h2>
+  <br>
+  <button (click)="goToBack(hero)">Go to Back</button>
+<br>
+</div>

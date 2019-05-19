@@ -1,0 +1,15 @@
+<div>
+  <h4>Message Chat For Heroes</h4>
+  <div *ngIf="details">
+    {{ details }}
+  </div>
+  <mat-form-field>
+    <input [(ngModel)]="message" matInput placeholder="Send Message">
+  </mat-form-field>
+  <p *ngIf="sending">
+    <button (click)="send()">Send Meessage</button>
+    <button (click)="closePopup()">Clouse Message</button>
+  </p>
+   
+</div>
+

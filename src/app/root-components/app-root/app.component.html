@@ -1,0 +1,30 @@
+<section class="main">
+    <h1>Angular Routing</h1>
+    <nav class="nav-panel">
+        <a routerLink="/heroes-list" routerLinkActive="active-rout" >Heroes</a>
+        <a routerLink="/crisis-center" routerLinkActive="active-rout" >Crisis Center</a>
+        <a routerLink="/admin" routerLinkActive="active-rout">Admin</a>
+        <a [routerLink]="['./', 'auth', 'login']" routerLinkActive="active-rout">Login</a><br><br>
+        <a [routerLink]="[{ outlets: { popup: ['compose'] } }]" routerLinkActive="active-rout">Contact</a> 
+        <a [routerLink]="[{ outlets: { popup: ['chat']    } }]" routerLinkActive="active-rout">Chat</a>
+    </nav>
+
+
+
+    <div [@routeAnimation]="getAnimationData(routerOutlet)">
+        
+        <!-- Main Content -->
+        <router-outlet #routerOutlet="outlet"></router-outlet> 
+        <!-- Chat and Hero Messenher -->
+        <router-outlet name="popup"></router-outlet> 
+<!-- 
+        <router-outlet name="popupTwo"></router-outlet>
+        <a [routerLink]="[ {outlets: { popupTwo: ['two'] }} ]">detail aaaaa</a> -->
+    </div>
+</section>
+
+
+
+<!-- <router-outlet name="popupTwo"></router-outlet>
+ <a [routerLink]="[ {outlets: { primary: ['heroes-list'], popupTwo: ['two'] }} ]">aaaaaaaaaaa</a> -->
+

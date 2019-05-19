@@ -1,0 +1,18 @@
+.main { 
+    h1 { padding: 5% 0 }
+    margin: 2% auto;
+    width: 33%;
+    h1 { text-align: center; }
+}
+.active-rout { color: rgb(77, 123, 223) !important; background: gainsboro !important }
+nav {  
+    padding-bottom: 11%;
+    a {
+    color: #484949;
+    text-decoration: none;
+    background: aliceblue;
+    padding: 3px;
+    border-radius: 2px;
+    margin: 0% 1.5%
+    }
+}

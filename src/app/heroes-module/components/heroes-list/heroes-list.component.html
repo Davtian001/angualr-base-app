@@ -1,0 +1,19 @@
+
+<section class="heroes-list">
+    <h3>HEROES</h3>
+    <ul class="heroes">
+        <li *ngFor="let hero of heroes$ | async as heroes; index as i" [class.selected]="hero.id === selectedId">
+
+            <a [routerLink]="['../', 'hero',hero.id, { ind: i, count: heroes.length }]"> 
+                <span class="badge">{{ hero.id }}</span> 
+                <span class="hero-name">{{ hero.name }}</span>
+            </a>
+            
+     
+        </li>
+    </ul>
+
+    <button routerLink="/sidekicks">Go to sidekicks</button>
+</section>
+
+<!-- <a [routerLink]="[ {outlets: { primary: ['heroes-list'], popupTwo: ['two'] }} ]"> listicc aaaaa</a>   ste chi asxatum menak app-root-um-->
